@@ -108,7 +108,11 @@ img {
   width: 66%;
   margin: 100px auto;
   background-color: #fff;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 10px -1px 33px -9px rgba(0,0,0,0.66);
+-webkit-box-shadow: 10px -1px 33px -9px rgba(0,0,0,0.66);
+-moz-box-shadow: 10px -1px 33px -9px rgba(0,0,0,0.66);
 }
 
 /* ==========================================================================
@@ -142,7 +146,6 @@ img {
 }
 
 .step::before {
-  content: "1";
   position: absolute;
   top: 0;
   left: -25%;
@@ -157,6 +160,11 @@ img {
   transition: all .3s ease-in-out;
 }
 
+.step-1::before { content: "1"; }
+.step-2::before { content: "2"; }
+.step-3::before { content: "3"; }
+.step-4::before { content: "4"; }
+
 .step-name a {
   font-size: 14px;
   font-weight: 600;
@@ -169,6 +177,73 @@ img {
    1. Aside section End here
 ========================================================================== */
 
+/* ==========================================================================
+   2. contect section start here
+========================================================================== */
+.content {
+  flex-basis: 70%;
+  padding: 30px 11%;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.content p {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #b4b3b9;
+}
+
+input {
+  display: block;
+  padding: 12px;
+  margin: 5px 0 20px;
+  width: 100%;
+  outline:none;
+  border: 1px solid #b4b3b9;
+  border-radius: 8px;
+  color: #253959;
+  font-weight: 600;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  margin-left: 3px;
+  color: #253959;
+}
+
+form {
+  margin-top: 45px;
+}
+
+input:focus {
+  border: 1px solid #174a8b;
+}
+
+.next-step-btn {
+  display: block;
+  background-color: #174a8b;
+  border: 1px solid #174a8b;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  float: right;
+  margin-top: 90px;
+  transition: all .3s ease-in-out;
+  box-shadow: 14px 4px 36px 0px rgba(0,0,0,0.27);
+-webkit-box-shadow: 14px 4px 36px 0px rgba(0,0,0,0.27);
+-moz-box-shadow: 14px 4px 36px 0px rgba(0,0,0,0.27);
+}
+/* ==========================================================================
+   2. content section end here
+========================================================================== */
 @media screen and (min-width:995px) {
   .step-name a:hover {
     color: #add51e;
@@ -177,6 +252,12 @@ img {
   .step:hover::before {
     background-color: #bfdffe;
     color: #000;
+  }
+
+  .next-step-btn:hover {
+    background-color: #fff;
+    border: 1px solid #174a8b;
+    color: #253959;
   }
 }
 
