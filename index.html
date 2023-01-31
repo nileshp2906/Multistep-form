@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charno="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./asnos/images/favicon-32x32.png">
   <link rel="stylesheet" href="./index.css">
   <title>Frontend Mentor | Multi-step form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -20,7 +16,7 @@
       <!-- SIDE SECTION START HERE -->
       <aside class="sidebar">
         <ul class="steps">
-          <li class="step step-1">
+          <li class="step step-1 active">
             <span class="step-text">STEP 1</span>
             <span class="step-name">
               <a href="#FIXME">Your info</a>
@@ -53,19 +49,23 @@
         <form action="#FIXME">
           <div class="name">
             <label for="name">Name</label>
-            <input type="text" name="Name" id="name">
+            <span class="error" id="name-error" data-no="1"></span>
+            <input type="text" name="Name" id="name" data-no="1">
           </div>
           <div class="email">
             <label for="email">Email address</label>
-            <input type="email" name="Email" id="email">
+            <span class="error" id="email-error" data-no="2"></span>
+            <input type="email" name="Email" id="email" data-no="2">
           </div>
           <div class="mobile">
             <label for="mobile">Phone Number</label>
-            <input type="tel" name="Mobile" id="mobile">
+            <span class="error" id="no-error" data-no="3"></span>
+            <input type="tel" name="Mobile" id="mobile" data-no="3">
           </div>
         </form>
         <a href="#FIXME" title="Next step" class="next-step-btn">Next step</a>
       </section>
     </div>
   </div>
+  <script src="./index.js"></script>
 </body>
