@@ -297,6 +297,14 @@ input:focus {
   transition: all .5s ease-in-out;
 }
 
+.plan-list.active {
+  background-color: #f8f9fe;
+  border: 1px solid #918ebd;
+  box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+  -moz-box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+}
+
 .plan-name {
   display: block;
   color: #21334f;
