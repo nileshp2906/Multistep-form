@@ -124,6 +124,7 @@ img {
   flex-basis: 30%;
   min-height: 568px;
   height: 100%;
+  border-radius: 10px;
 }
 
 .container .wrapper { display: flex; }
@@ -267,10 +268,152 @@ input:focus {
     border: 1px solid #174a8b;
     color: #253959;
   }
+
+  .plan-list:hover {
+    background-color: #f8f9fe;
+    border: 1px solid #918ebd;
+    box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+  -moz-box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+  }
+
+  .go-back-btn:hover {
+    background-color: #174a8b;
+    border: 1px solid #174a8b;
+    color: #fff;
+  }
 }
 
 
+/* ==========================================================================
+   SECOND HTML FILE STYLE SHEET START HERE
+========================================================================== */
+.plans {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.plan-list {
+  flex-basis: 31%;
+  padding: 15px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #d3d4d7;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
 
+.plan-list.active {
+  background-color: #f8f9fe;
+  border: 1px solid #918ebd;
+  box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+  -moz-box-shadow: 10px 10px 25px 2px rgba(0,0,0,0.21);
+}
+
+.plan-name {
+  display: block;
+  color: #21334f;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 50px;
+}
+
+.plan-price {
+  display: block;
+  color: #d3d4d7;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.plan-range {
+  background-color: #f8f9fe;
+  padding: 10px;
+  text-align: center;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider { background-color: #062851;}
+input:focus + .slider { box-shadow: 0 0 1px #062851;}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+
+.monthly ,
+.yearly {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.procced-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.go-back-btn {
+  display: block;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #174a8b;
+  font-weight: 600;
+  font-size: 15px;
+  float: right;
+  margin-top: 90px;
+  transition: all .3s ease-in-out;
+}
+/* ==========================================================================
+   SECOND HTML FILE STYLE SHEET END HERE
+========================================================================== */
 
 
