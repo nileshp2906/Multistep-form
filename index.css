@@ -212,7 +212,7 @@ input {
 label {
   font-size: 13px;
   font-weight: 500;
-  display: block;
+  display: inline-block;
   margin-left: 3px;
   color: #253959;
 }
@@ -240,6 +240,14 @@ input:focus {
   box-shadow: 14px 4px 36px 0px rgba(0,0,0,0.27);
 -webkit-box-shadow: 14px 4px 36px 0px rgba(0,0,0,0.27);
 -moz-box-shadow: 14px 4px 36px 0px rgba(0,0,0,0.27);
+}
+
+.error {
+  color: red;
+  display: block;
+  float: right;
+  font-size: 13px;
+  font-weight: 500;
 }
 /* ==========================================================================
    2. content section end here
