@@ -11,6 +11,9 @@ const nameRegex = /[A-Za-z]+[^0-9_]{3,29}$/;
 const emailRegex = /^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
 const mobileRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
 
+
+
+
 nextBtn.addEventListener("click",(e)=>{
   inputs.forEach((i)=>{
     if(i.value == ""){
@@ -27,13 +30,13 @@ nextBtn.addEventListener("click",(e)=>{
     
     else {
         if(i.dataset.no == "1"){
-            nameError.innerHTML =""
+            nameError.innerHTML ="";
         }
         if(i.dataset.no == "2"){
-            emailError.innerHTML =""
+            emailError.innerHTML ="";
         }
         if(i.dataset.no == "3"){
-            noError.innerHTML =""
+            noError.innerHTML ="";
         }
     }
   })
@@ -51,7 +54,7 @@ nextBtn.addEventListener("click",(e)=>{
     }
 
     if(nameError.innerHTML == "" && emailError.innerHTML == "" && noError.innerHTML == "") {
-        
+        const gk = nextBtn.setAttribute('href','./step2.html');
     }
 
 });
